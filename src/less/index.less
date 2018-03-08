@@ -1,4 +1,5 @@
 @import './login.less';
+@import './global.less';
 
 *{
     margin: 0;
@@ -9,10 +10,19 @@ html, body, #root,{
     height: 100%;
 }
 
-.App{
+.app-container{
     padding: 20px;
+    background: #f2f2f2;
 }
 
-.navbar .container{
-    width: auto;
+.navbar{
+    margin-bottom: 0 !important;
+    .container{
+        width: auto;
+    }
 }
+
+.icon-star{
+    color: #ccc;
+}
+

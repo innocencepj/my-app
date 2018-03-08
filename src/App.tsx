@@ -1,13 +1,15 @@
 import * as React from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
-// import Header from "./components/Header";
-import Main from "./components/Main";
+import Home from "./components/Home";
 
 class App extends React.Component {
   render() {
     return (
-      <Main />
+      <div>
+        <Home />
+      </div>
+      
     );
   }
 }
