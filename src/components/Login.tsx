@@ -1,10 +1,26 @@
 import * as React from "react";
+import './../less/login.less'
+// import createBrowserHistory from "history/createBrowserHistory";
+// const history = createBrowserHistory();
 
 class Login extends React.Component {
-  render() {
+
+  state = {
+    login: localStorage.getItem('login')
+  }
+
+  login = () => {
+    // this.props.history.push()
+      localStorage.setItem('login','true');
+      // history.push('/');
+      
+  }
+
+
+  render():any {
     return (
       <div className="container login-container">
-        <form action="" className="form-horizontal">
+        <form action="" className="form-horizontal"> 
           <div className="form-group">
             <label htmlFor="userName" className="col-sm-4 control-label">
               用户名
@@ -42,7 +58,7 @@ class Login extends React.Component {
           </div>
           <div className="form-group">
             <div className="col-sm-offset-4 col-sm-10">
-              <button className="btn btn-default">登录</button>
+              <button className="btn btn-default" onClick={this.login}>登录</button>
             </div>
           </div>
         </form>

@@ -5,6 +5,7 @@ import Home from "../components/Home";
 import { HashRouter } from "react-router-dom";
 import List from "../components/List";
 import App from "../App";
+import Detail from "../components/Detail";
 
 class RouteMap extends React.Component {
   updateHandle() {
@@ -19,6 +20,7 @@ class RouteMap extends React.Component {
           <Route path="/login" component={Login} />
           <Route path="/home" component={Home} />
           <Route path="/list" component={List} />
+          <Route path="/detail" component={Detail} />
         </Switch>
       </HashRouter>
     );

@@ -1,6 +1,5 @@
 import * as React from "react";
-import Header from "./Header";
-import { ListGroup, } from "react-bootstrap";
+import { ListGroup } from "react-bootstrap";
 import ListItem from "./ListItem";
 
 class List extends React.Component<any, any> {
@@ -9,26 +8,27 @@ class List extends React.Component<any, any> {
     this.state = {
       topicList: [
         {
-          id:"1",
+          id: "1",
           title: "各位行好帮穷人选台二手车吧！",
           user: "john",
-          publicTime: "1520219508",
-          lastReplyTime: "1520219508",
-          topic: "全部"
+          publicTime: 1520995750350,
+          lastReplyTime: 1520995750350,
+          topic: "全部",
+          text: "aaaaaa&nbsp;aaaa<br/>aaaaa"
         },
         {
-          id:"2",
+          id: "2",
           title: "各位行好帮穷人选台二手车吧！",
           user: "john",
-          publicTime: "1520219508",
-          lastReplyTime: "1520219508",
-          topic: "全部"
+          publicTime: 1520995750350,
+          lastReplyTime: 1520995750350,
+          topic: "全部",
+          text: "aaaaaa&nbsp;aaaa\naaaaa"
         }
       ]
     };
   }
 
-  
   render() {
     console.log(this.state.topicList);
     const topicList = this.state.topicList;
@@ -39,16 +39,14 @@ class List extends React.Component<any, any> {
           title={item.title}
           user={item.user}
           publicTime={item.publicTime}
+          text={item.text}
         />
       );
     });
     return (
       <div className="container">
-        <Header />
         <div className="content-container">
-          <ListGroup>
-            {listContent}
-          </ListGroup>
+          <ListGroup>{listContent}</ListGroup>
         </div>
       </div>
     );
